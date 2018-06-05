@@ -37,7 +37,7 @@ David,Rudd,60050,9%,01 March – 31 March
 Ryan,Chen,120000,10%,01 March – 31 March
 ```
 
-Output (name, pay period, gross income, income tax, net income, super):
+Output (name, pay period, gross income, income tax, net income, xz):
 ```
 David Rudd,01 March – 31 March,5004,922,4082,450
  Ryan Chen,01 March – 31 March,10000,2669,7331,1000
@@ -48,72 +48,18 @@ As part of your solution:
 
 
 
-let arr = ["David,Rudd,60050,9%,01 March – 31 March", "Ryan,Chen,120000,10%,01 March – 31 March"];
-let arrObj = [];
-var handleIncomeTax = function(annualSalary){
-	if(annualSalary < 0){
-		return -1;
-	}
-	annualSalary = Math.round(annualSalary);
-	if(annualSalary >= 0){
 
-	} else{
 
-	}
-	<!-- if(annualSalary >= 0 && annualSalary <= 18200){
-		
-	} else if(annualSalary >= 18201 && annualSalary <= 37000){
-		
-	} else if(annualSalary >= 37001 && annualSalary <= 87000){
-		
-	} else if(annualSalary >= 87001 && annualSalary <= 180000){
-		
-	} else if(annualSalary >= 180001){
 
-	} -->
-}
-for(let i = 0; i < arr.length; i++){
-	let strArr = arr[i].split(",");
-	let obj;
-	obj.paymentStartDate = strArr.pop();
-	obj.superRate = strArr.pop();
-	obj.annualSalary = strArr.pop();
-	obj.name = strArr.join(" ");
-	
-	let grossIncome = Math.round(obj.annualSalary / 12);
-	let incomeTax = (3,572 + (obj.annualSalary - 37,000) x 0.325) / 12 
-	arrObj.push(obj);
-}
-console.log(arrObj);
 
-$0 - $18,200 | Nil
-$18,201 - $37,000 | 19c for each $1 over $18,200
-$37,001 - $87,000 | $3,572 plus 32.5c for each $1 over $37,000
-$87,001 - $180,000 | $19,822 plus 37c for each $1 over $87,000
-$180,001 and over | $54,232 plus 45c for each $1 over $180,000
 
-x = 87009
-var ret = 0;
-var range = [18200, 37000, 87000, 180000];
-var rate = [0.19, 0.325, 0.37, 0.45];
-var divided = [];
-for(let i = 0; i < range.length; i++){
-	let val = range[i];
-	let temp = x - val;
-	console.log(">>", temp, x, val);
 
-	jj = val * rate[i];
-	ret += jj;
-	console.log("@@", jj, ret);
-	
-	if(temp > 0){	
-		divided.push(val);
-	} else{
-		divided.push(x);
-		break;
-	}
-	x = temp;
-}
-console.log(divided)
+
+
+
+
+
+
+
 
 

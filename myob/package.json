@@ -1,0 +1,22 @@
+{
+  "name": "myob",
+  "version": "1.0.0",
+  "description": "myob code challenge for tax calculation",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dontcry2013/code-challenge.git"
+  },
+  "author": "Zach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dontcry2013/code-challenge/issues"
+  },
+  "homepage": "https://github.com/dontcry2013/code-challenge#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}

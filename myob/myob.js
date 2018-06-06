@@ -217,26 +217,16 @@ const handleLine = function getTheOutputLineByReadOneLineFromFile(inputLineObj) 
 	return retArr.join(",");
 }
 
-const fs = require("fs");
-const fd = fs.createWriteStream('./output.csv', {flags: 'a'});
 
-var lineReader = require('readline').createInterface({
-  input: require('fs').createReadStream('./input.csv')
-});
-
-lineReader.on('line', function(line){
-  console.log(line);
-  let newLine;
-  let validationResult = validateLine(line);
-  if(validationResult.code < 0){
-  	newLine = `${validationResult.errorMsg}, the original data is, ${line}`;
-  } else{
-  	newLine = handleLine(validationResult.data);
-  }
-
-  console.log(newLine);
-  fd.write(newLine+"\n");
-});
+if (typeof module !== 'undefined' && module.exports != null) {
+    exports.validatePayPeriod = validatePayPeriod;
+    exports.validateSuperRate = validateSuperRate;
+    exports.validateSalary = validateSalary;
+    exports.validateName = validateName;
+    exports.handleIncomeTax = handleIncomeTax;
+    exports.validateLine = validateLine;
+    exports.handleLine = handleLine;
+}
 
 
 

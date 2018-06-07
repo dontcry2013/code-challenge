@@ -1,7 +1,2 @@
 David Rudd,01 March – 31 March,5004,922,4082,450
 Ryan Chen,01 March – 31 March,10000,2669,7331,1000
-start and end date are not in the same month, the original data is, Ryan,Chen,120000,10d%,01 Feb – 31 March
-start or end date format error, the original data is, Ryan,Chen,120000,10%,01 March – 31 Mch
-date string format error, the original data is, Ryan,Chen,120000,10%,01 Feb 31 MarcX
-super rate value is invalid, the original data is, Ryan,Chen,78000,7d9%,01 March – 31 March
-Ryan Middlename Chen,01 March – 31 March,6500,1408,5092,715

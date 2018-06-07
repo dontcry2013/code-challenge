@@ -13,11 +13,17 @@ lineReader.on('line', function(line){
   let printMsg;
   let validationResult = myob.validateLine(line);
   if(validationResult.code < 0){
-  	newLine = `${validationResult.errorMsg}, the original data is, ${line}`;
+  	newLine = `${validationResult.msg}, the original data is, ${line}`;
   	printMsg = "failed";
   } else{
-  	newLine = myob.handleLine(validationResult.data);
-  	printMsg = "success";
+  	newLineObj = myob.handleLine(validationResult.data);
+    if(newLineObj.code > 0){
+      printMsg = "success";
+      newLine = newLineObj.data;
+    } else{
+      printMsg = "failed";
+      newLine = `handleLine error, the original data is, ${line}`;
+    }
   }
   console.log(printMsg);
   fd.write(newLine+"\n");

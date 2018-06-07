@@ -4,6 +4,7 @@
   "description": "myob code challenge for tax calculation",
   "main": "index.js",
   "scripts": {
+    "dev": "node index.js",
     "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
